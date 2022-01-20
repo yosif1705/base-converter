@@ -1,0 +1,4 @@
+application\Main.class
+module-info.class
+application\Launcher.class
+controllers\MainController.class
