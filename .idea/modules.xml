@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/base-converter/base-converter.iml" filepath="$PROJECT_DIR$/base-converter/base-converter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/jugubugule.iml" filepath="$PROJECT_DIR$/.idea/jugubugule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/proj.iml" filepath="$PROJECT_DIR$/.idea/proj.iml" />
     </modules>
   </component>
 </project>
