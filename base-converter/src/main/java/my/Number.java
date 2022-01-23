@@ -45,9 +45,8 @@ public class Number {
     }
 
 
-    public Number parseTo (int radix) {
-        if (this.radix == radix) return this;
-        else return Converter.fromDecimalTo(Converter.convertToBase10(this) , radix);
+    public Number parseTo (int newRadix) {
+        return Converter.parse(this,newRadix);
     }
 
     public String toString() {
