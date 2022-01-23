@@ -6,12 +6,19 @@ public class Number {
 
     private String processString(String str) {
         String result = str;
-        String leadingZeros;
+        String leadingZerosRegex = "^0+(?!$)";
+        boolean isNumNegative = false;
 
-        if(str.charAt(0) == '-') leadingZeros = "^-0+(?!$)";
-        else leadingZeros = "^0+(?!$)";
+        if(str.charAt(0) == '-'){
+            result = str.replaceFirst("-","");
+            isNumNegative = true;
+        }
 
-        result = result.replaceAll(leadingZeros, "");
+        result = result.replaceAll(leadingZerosRegex, "");
+
+        if(isNumNegative){
+            result = "-" + result;
+        }
 
         return result;
     }

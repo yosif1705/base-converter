@@ -54,6 +54,7 @@ public class MainController implements Initializable {
             alert.show();
             return;
         }
+        inputTextField.setText(number.toString());
         String result = number.parseTo(basesComboBox2.getValue()).toString();
         resultTextArea.setText(result);
     }

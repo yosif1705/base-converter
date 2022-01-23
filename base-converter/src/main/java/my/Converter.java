@@ -45,11 +45,19 @@ class Converter {
         StringBuilder result = new StringBuilder();
         int remainder;
 
+        if(decimal.isNegative()){
+            tempDecimal = tempDecimal.multiply(BigInteger.valueOf(-1));
+        }
+
         do{
-            remainder = tempDecimal.mod(BigInteger.valueOf(targetBase)).intValueExact();
-            result.append(ValidCharacters.getChar(remainder));
-            tempDecimal = tempDecimal.divide(BigInteger.valueOf(targetBase));
+            remainder = tempDecimal.mod(BigInteger.valueOf(targetBase)).intValueExact(); // Dividing the number by the base and getting the remainder
+            result.append(ValidCharacters.getChar(remainder)); // Adding the character of the remainder's value to the result
+            tempDecimal = tempDecimal.divide(BigInteger.valueOf(targetBase)); // updating the number
         }while(tempDecimal.signum() == 1);
+
+        if (decimal.isNegative()){
+            result.append("-");
+        }
 
         return new Number(result.reverse().toString(),targetBase);
     }
