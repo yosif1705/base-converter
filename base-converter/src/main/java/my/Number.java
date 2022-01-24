@@ -25,7 +25,7 @@ public class Number {
 
     private void isValid(String num , int base){
         for (int i = 0; i < num.length(); i++) {
-            String invalidStringException = "For input string: \"" + num + "\"" + (base == 10 ? "" : " under radix " + base);
+            String invalidStringException = "For input string: \"" + num + "\"" + " under radix " + base;
             String invalidRadixException = "For input radix: \"" + base + "\". " + "Radix out of bounds! Min = " + ValidCharacters.MIN_RADIX + " , Max = " +ValidCharacters.MAX_RADIX;
             if (i == 0){
                 if(num.charAt(i) == '-'){
