@@ -32,7 +32,7 @@ public class Number {
                     continue;
                 }
             }
-            if (!ValidCharacters.validCharacters.contains(String.valueOf(num.charAt(i)))){
+            if (!ValidCharacters.contains(num.charAt(i))){
                 throw new NumberFormatException(invalidStringException);
             }
             if (ValidCharacters.getValue(num.charAt(i)) >= base) {
